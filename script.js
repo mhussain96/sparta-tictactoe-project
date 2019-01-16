@@ -18,8 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   for (let i = 0; i < squares.length; i++) {
     squares[i].addEventListener("click", function(e) {
-      document
-      console.log(e.target);
+      // document.getElementsByTagName()
+      // console.log(e.target);
+      e.target.className = "X";
+      e.target.innerText = 'X';
+
+      if (playerTurn) {
+        e.target.className = 'O';
+        e.target.innerText = 'O';
+      }
     })
   }
   
